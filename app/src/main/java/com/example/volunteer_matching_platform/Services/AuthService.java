@@ -1,4 +1,4 @@
-package com.volunteer_matching_platform.Services;
+package com.example.volunteer_matching_platform.Services;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.AuthResult;

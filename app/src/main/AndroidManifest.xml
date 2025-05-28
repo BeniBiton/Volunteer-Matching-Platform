@@ -15,7 +15,7 @@
 
         <!-- You can define your launcher activity here -->
         <activity
-            android:name=".Activities.LoginPage"
+            android:name="com.example.volunteer_matching_platform.Activities.LoginPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
