@@ -2,8 +2,8 @@ package com.example.models;
 
 import android.location.Location;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class Event {
     private String id;
@@ -13,10 +13,10 @@ public class Event {
     private Location location;
     private Date date;
     private int needVolunteers;
-    private ArrayList<Volunteer> applicants = new ArrayList<>();
-    private ArrayList<Volunteer> accepted = new ArrayList<>();
+    private HashMap<String, Volunteer> applicants;
+    private HashMap<String, Volunteer> accepted;
 
-    public Event(String id, Organizer organizer, String title, String description, Location location, Date date, int needVolunteers, ArrayList<Volunteer> applicants, ArrayList<Volunteer> accepted) {
+    public Event(String id, Organizer organizer, String title, String description, Location location, Date date, int needVolunteers) {
         this.id = id;
         this.organizer = organizer;
         this.title = title;
@@ -24,8 +24,8 @@ public class Event {
         this.location = location;
         this.date = date;
         this.needVolunteers = needVolunteers;
-        this.applicants = applicants;
-        this.accepted = accepted;
+        this.applicants = new HashMap<>();
+        this.accepted = new HashMap<>();
     }
 
     @Override

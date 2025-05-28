@@ -1,16 +1,18 @@
 package com.example.models;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class Volunteer extends User{
     private double hoursVolunteered;
-    private HashSet<Skill> skills = new HashSet<>();
-    private ArrayList<Event> eventsJoined = new ArrayList<>();
+    private HashSet<Skill> skills;
+    private HashMap<String, Event> eventsJoined;
 
     Volunteer(String id, String name, String email) {
         super(id, name, email);
         this.hoursVolunteered = 0.0;
+        this.skills = new HashSet<>();
+        this.eventsJoined = new HashMap<>();
     }
 
     @Override

@@ -1,14 +1,15 @@
 package com.example.models;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Organizer extends User{
     private String organizationName;
-    private ArrayList<Event> eventsCommend = new ArrayList<>();
+    private HashMap<String, Event> eventsCommend;
 
     Organizer(String id, String name, String email, String organizationName) {
         super(id, name, email);
         this.organizationName = organizationName;
+        eventsCommend = new HashMap<>();
     }
 
     @Override
