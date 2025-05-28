@@ -1,4 +1,4 @@
-package com.example;
+package com.volunteer_matching_platform;
 
 import android.app.Application;
 import com.google.firebase.FirebaseApp;
