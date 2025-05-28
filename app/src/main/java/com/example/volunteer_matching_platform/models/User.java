@@ -1,4 +1,4 @@
-package com.example.models;
+package com.example.volunteer_matching_platform.models;
 
 public abstract class User {
     protected String id;

@@ -1,4 +1,4 @@
-package com.volunteer_matching_platform.Activities;
+package com.example.volunteer_matching_platform.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.volunteer_matching_platform.R;
-import com.volunteer_matching_platform.Services.AuthService;
-import com.volunteer_matching_platform.Services.FirestoreService;
+import com.example.volunteer_matching_platform.Services.AuthService;
+import com.example.volunteer_matching_platform.Services.FirestoreService;
 
 public class LoginPage extends AppCompatActivity {
 
@@ -33,6 +33,10 @@ public class LoginPage extends AppCompatActivity {
         loginButton = findViewById(R.id.loginButton);
         goToRegistrationLink = findViewById(R.id.goToRegistrationLink);
 
+        goToRegistrationLink.setOnClickListener(view -> {
+            Intent intent = new Intent(LoginPage.this, RegisterPage.class);
+            startActivity(intent);
+        });
 
         loginButton.setOnClickListener(v -> loginUser());
     }

@@ -1,4 +1,4 @@
-package com.example.models;
+package com.example.volunteer_matching_platform.models;
 
 import java.util.HashMap;
 
