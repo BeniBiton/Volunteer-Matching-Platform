@@ -2,6 +2,7 @@ package com.example.volunteer_matching_platform.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -63,6 +64,7 @@ public class RegisterPage extends AppCompatActivity {
                 Map<String, Object> profileData = new HashMap<>();
                 profileData.put("email", email);
                 profileData.put("userType", userType);
+                Log.d("RegisterPage", "the register with ID:" + userId + " is success");
 
                 firestoreService.saveUserProfile(userId, profileData, profileTask -> {
                     if (profileTask.isSuccessful()) {

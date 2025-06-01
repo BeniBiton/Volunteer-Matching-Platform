@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "266263187359",
+    "project_id": "volunteer-matching-platf-56173",
+    "storage_bucket": "volunteer-matching-platf-56173.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266263187359:android:ccf162fa8b57a886d4f7aa",
+        "android_client_info": {
+          "package_name": "com.example.volunteer_matching_platform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266263187359-bvjh1f8ig5jsgs5sil1s06rt6pdu1rca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7YM5HsCK9t4L9kgHQF6CoveNYqb-5ePQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266263187359-bvjh1f8ig5jsgs5sil1s06rt6pdu1rca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
