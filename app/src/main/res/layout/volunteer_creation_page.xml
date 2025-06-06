@@ -38,13 +38,14 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Full Name"
-                    app:boxStrokeColor="@color/primary">
+                    app:boxStrokeColor="@color/primary"
+                    app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editTextName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Full Name"
                         android:padding="10dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,13 +53,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Age"
-                    app:boxStrokeColor="@color/primary">
+                    app:boxStrokeColor="@color/primary"
+                    app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editTextAge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Age"
                         android:inputType="number"
                         android:padding="10dp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -67,13 +69,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Region"
-                    app:boxStrokeColor="@color/primary">
+                    app:boxStrokeColor="@color/primary"
+                    app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editTextRegion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Region"
                         android:padding="10dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,8 +84,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Location Address (use selector)"
-                    app:boxStrokeColor="@color/primary">
+                    app:boxStrokeColor="@color/primary"
+                    app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editTextLocationAddress"
@@ -90,6 +93,7 @@
                         android:layout_height="wrap_content"
                         android:clickable="false"
                         android:focusable="false"
+                        android:hint="Location Address (use selector)"
                         android:padding="10dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,7 +104,7 @@
                     android:layout_marginTop="8dp"
                     android:backgroundTint="@color/primary"
                     android:padding="10dp"
-                    android:text="Choose adress from google"
+                    android:text="Choose address from Google"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     app:cornerRadius="16dp" />
@@ -110,8 +114,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Skills (multi-select)"
-                    app:boxStrokeColor="@color/primary">
+                    app:boxStrokeColor="@color/primary"
+                    app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editTextSkills"
@@ -120,9 +124,9 @@
                         android:clickable="true"
                         android:drawableEnd="@drawable/ic_arrow_drop_down"
                         android:focusable="false"
+                        android:hint="Skills (multi-select)"
                         android:inputType="none"
                         android:padding="10dp" />
-
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -130,8 +134,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Interests (multi-select)"
-                    app:boxStrokeColor="@color/primary">
+                    app:boxStrokeColor="@color/primary"
+                    app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editTextInterests"
@@ -140,22 +144,23 @@
                         android:clickable="true"
                         android:drawableEnd="@drawable/ic_arrow_drop_down"
                         android:focusable="false"
+                        android:hint="Interests (multi-select)"
                         android:inputType="none"
                         android:padding="10dp" />
                 </com.google.android.material.textfield.TextInputLayout>
-
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Phone Number"
-                    app:boxStrokeColor="@color/primary">
+                    app:boxStrokeColor="@color/primary"
+                    app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editTextPhoneNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Phone Number"
                         android:inputType="phone"
                         android:padding="10dp" />
                 </com.google.android.material.textfield.TextInputLayout>
