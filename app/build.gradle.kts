@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace  = "com.volunteer_matching_platform"
+    namespace = "com.volunteer_matching_platform"
     compileSdk = 35
 
     defaultConfig {
@@ -41,7 +41,12 @@ dependencies {
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.google.android.libraries.places:places:3.3.0")
+    implementation("com.google.firebase:firebase-bom:32.8.1")
+    implementation("com.google.firebase:firebase-storage")
+    implementation("com.google.firebase:firebase-auth")
 }
