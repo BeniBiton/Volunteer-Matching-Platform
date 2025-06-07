@@ -1,4 +1,4 @@
-package com.example.volunteer_matching_platform.Models;
+package com.example.volunteer_matching_platform.Enums;
 
 public enum Skill {
     SKILL_TEACHING("Teaching"),

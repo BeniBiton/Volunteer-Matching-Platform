@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.File
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
@@ -7,6 +10,13 @@ plugins {
 android {
     namespace = "com.volunteer_matching_platform"
     compileSdk = 35
+    val localProperties = Properties()
+    val localPropertiesFile = File(rootDir, "secret.properties")
+    if (localPropertiesFile.exists()) {
+        localPropertiesFile.inputStream().use {
+            localProperties.load(it)
+        }
+    }
 
     defaultConfig {
         applicationId = "com.example.volunteer_matching_platform"
@@ -16,7 +26,14 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField(
+            "String",
+            "PLACES_API_KEY",
+            "\"" + localProperties.getProperty("PLACES_API_KEY") + "\""
+        )
+
     }
+
 
     buildTypes {
         release {
@@ -25,11 +42,29 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField(
+                "String",
+                "PLACES_API_KEY",
+                "\"" + localProperties.getProperty("PLACES_API_KEY") + "\""
+            )
+        }
+        debug {
+            buildConfigField(
+                "String",
+                "PLACES_API_KEY",
+                "\"" + localProperties.getProperty("PLACES_API_KEY") + "\""
+            )
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        compose = true
+        buildConfig = true
+        resValues = true
     }
 }
 

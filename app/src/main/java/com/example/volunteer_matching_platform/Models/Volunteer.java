@@ -2,6 +2,8 @@ package com.example.volunteer_matching_platform.Models;
 
 import android.util.Log;
 
+import com.example.volunteer_matching_platform.Enums.Skill;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;

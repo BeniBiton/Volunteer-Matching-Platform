@@ -1,6 +1,5 @@
 package com.example.volunteer_matching_platform.Activities.ProfileCreationPages;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,7 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.volunteer_matching_platform.Models.Skill;
+import com.example.volunteer_matching_platform.Enums.Interest;
+import com.example.volunteer_matching_platform.Enums.Skill;
 import com.example.volunteer_matching_platform.Models.Volunteer;
 import com.example.volunteer_matching_platform.Services.FireStorageService;
 import com.example.volunteer_matching_platform.Services.FirestoreService;
@@ -23,6 +23,8 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.volunteer_matching_platform.R;
+import com.volunteer_matching_platform.BuildConfig;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,13 +43,17 @@ public class VolunteerCreationPage extends AppCompatActivity {
     private final String[] skillsList = Arrays.stream(Skill.values())
             .map(Skill::getLabel)
             .toArray(String[]::new);
-    private final String[] interestsList = {"Environment", "Health", "Education", "Animals", "Elderly Care"};
+    private final String[] interestsList = Arrays.stream(Interest.values())
+            .map(Interest::getDisplayName)
+            .toArray(String[]::new);
     private Uri selectedImageUri = null;
     private boolean[] selectedSkills;
     private boolean[] selectedInterests;
     private final ArrayList<String> skillsSelected = new ArrayList<>();
     private final ArrayList<String> interestsSelected = new ArrayList<>();
     public static final int IMAGE_PICKER_REQUEST = 1000;
+
+    private String PlacesApiKey = BuildConfig.PLACES_API_KEY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
