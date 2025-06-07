@@ -61,7 +61,7 @@ public class VolunteerCreationPage extends AppCompatActivity {
         setContentView(R.layout.volunteer_creation_page);
 
         if (!Places.isInitialized()) {
-            Places.initialize(getApplicationContext(), "AIzaSyDw1Nf31ZtANkgcZQ-oUEuon2LnOqjptF4");
+            Places.initialize(getApplicationContext(), PlacesApiKey);
         }
 
         editTextName = findViewById(R.id.editTextName);
@@ -118,10 +118,17 @@ public class VolunteerCreationPage extends AppCompatActivity {
         try {
             age = Integer.parseInt(ageStr);
             phone = Integer.parseInt(phoneStr);
+
+            if (!phoneStr.matches("\\d{10}")) {
+                Toast.makeText(this, "Phone number must be 10 digits", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
         } catch (NumberFormatException e) {
             Toast.makeText(this, "Age and Phone must be valid numbers", Toast.LENGTH_SHORT).show();
             return;
         }
+
 
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
