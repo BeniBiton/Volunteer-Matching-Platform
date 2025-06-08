@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.volunteer_matching_platform.Activities.ProfileCreationPages.VolunteerCreationPage;
 import com.example.volunteer_matching_platform.Services.AuthService;
 import com.example.volunteer_matching_platform.Services.FirestoreService;
 import com.volunteer_matching_platform.R;
@@ -81,14 +82,20 @@ public class RegisterPage extends AppCompatActivity {
 
     private void navigateToHomeScreen(String userType) {
         Toast.makeText(this, "Navigating to " + userType + " screen", Toast.LENGTH_SHORT).show();
-        // this will be ok when i will make the page
-//      Intent intent = userType.equals("Babysitter") ?
-//              new Intent(this, .class) :
-//               new Intent(this, .class);
-//
-//        startActivity(intent);
+
+        Intent intent;
+
+        if (userType.equalsIgnoreCase("Volunteer")) {
+            intent = new Intent(this, VolunteerCreationPage.class);
+        } else {
+            showError("No screen found for userType: " + userType);
+            return;
+        }
+
+        startActivity(intent);
         finish();
     }
+
 
     private void showError(String massage) {
         Toast.makeText(this, massage, Toast.LENGTH_SHORT).show();
